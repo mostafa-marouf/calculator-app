@@ -1,0 +1,247 @@
+.theme-1 {
+    /*  Backgrounds */
+    --main-background: hsl(222, 26%, 31%);
+    --toggle-background: hsl(223, 31%, 20%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --screen-background: hsl(224, 36%, 15%);
+    /*  Keys */
+    --key-background: hsl(225, 21%, 49%);
+    --key-shadow: hsl(224, 28%, 35%);
+    --key-background-and-toggle: hsl(6, 63%, 50%);
+    --key-shadow-1: hsl(6, 70%, 34%);
+    --key-background-2: hsl(30, 25%, 89%);
+    --key-shadow-2: hsl(28, 16%, 65%);
+    /*  Text */
+    --text-1: hsl(0, 0%, 100%);
+    --text-2: hsl(221, 14%, 31%);
+    --text-3: hsl(0, 0%, 100%);
+    /* hover */
+    --hover-1: hsl(0, 0%, 93%);
+    --hover-2: hsl(224, 17%, 61%);
+    --hover-3: hsl(6, 77%, 58%);
+    /* ball position */
+    --ball: start;
+}
+
+.theme-2 {
+    /*  Backgrounds */
+    --main-background: hsl(0, 0%, 90%);
+    --toggle-background: hsl(0, 5%, 81%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --screen-background: hsl(0, 0%, 93%);
+    /*  Keys */
+    --key-background: hsl(185, 42%, 37%);
+    --key-shadow: hsl(185, 58%, 25%);
+    --key-background-and-toggle: hsl(25, 98%, 40%);
+    --key-shadow-1: hsl(25, 99%, 27%);
+    --key-background-2: hsl(45, 7%, 89%);
+    --key-shadow-2: hsl(35, 11%, 61%);
+    /*  Text */
+    --text-1: hsl(60, 10%, 19%);
+    --text-2: hsl(60, 10%, 19%);
+    --text-3: hsl(0, 0%, 100%);
+    /* hover */
+    --hover-1: ;
+    --hover-2: ;
+    --hover-3: ;
+    /* ball position */
+    --ball: center;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.theme-3 {
+    /*  Backgrounds */
+    --main-background: hsl(268, 75%, 9%);
+    --toggle-background: hsl(268, 71%, 12%);
+    --keypad-background: hsl(268, 71%, 12%);
+    --screen-background: hsl(268, 71%, 12%);
+    /*  Keys */
+    --key-background: hsl(281, 89%, 26%);
+    --key-shadow: hsl(285, 91%, 52%);
+    --key-background-and-toggle: hsl(176, 100%, 44%);
+    --key-shadow-1: hsl(177, 92%, 70%);
+    --key-background-2: hsl(268, 47%, 21%);
+    --key-shadow-2: hsl(290, 70%, 36%);
+    /*  Text */
+    --text-1: hsl(52, 100%, 62%);
+    --text-2: hsl(52, 100%, 62%);
+    --text-3: hsl(198, 20%, 13%);
+    /* hover */
+    --hover-1: ;
+    --hover-2: ;
+    --hover-3: ;
+    /* ball position */
+    --ball: end;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+}
+
+.theme-1 {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.device {
+    width: 500px;
+    height: 630px;
+}
+
+.thems {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-1);
+}
+
+.toggle {
+    width: 60px;
+    height: 20px;
+    background-color: var(--toggle-background);
+    border-radius: 10px;
+    display: flex;
+    justify-content: var(--ball);
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.bg-h {
+    background-color: transparent;
+    width: 13px;
+    height: 35px;
+}
+
+.ball {
+    width: 13px;
+    height: 13px;
+    margin: 0 3.5px;
+    border-radius: 50%;
+    background-color: var(--key-background-and-toggle);
+}
+
+.choices-theme {
+    display: flex;
+}
+
+.choices-theme>p {
+    font-size: x-small;
+    margin: 2px 20px 0;
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -18px;
+    left: 0px;
+    width: 60px;
+    font-size: x-small;
+}
+
+.screen {
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 30px;
+    background-color: var(--screen-background);
+    font-size: 32px;
+    color: var(--text-1);
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    overflow: hidden;
+}
+
+.screen p {
+    margin: 0 25px;
+    font-size: 45px;
+}
+
+.keypad {
+
+    width: 100%;
+    height: 450px;
+    background-color: var(--keypad-background);
+    margin-top: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keypad>div {
+    margin: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    width: 90px;
+    height: 65px;
+    background-color: var(--key-background-2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: var(--text-2);
+    box-shadow: 0px 4px var(--key-shadow-2);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.big-btn {
+    width: 211px;
+    height: 65px;
+}
+
+.reser-btn {
+    background-color: var(--key-background);
+    box-shadow: 0px 4px var(--key-shadow);
+    color: white;
+    font-size: 25px;
+}
+
+.equale-btn {
+    background-color: var(--key-background-and-toggle);
+    box-shadow: 0px 4px var(--key-shadow-1);
+    color: var(--text-3);
+}
+
+.btn:hover {
+    background-color: var(--hover-1);
+}
+
+.reser-btn:hover {
+    background-color: var(--hover-2);
+
+}
+
+.equale-btn:hover {
+    background-color: var(--hover-3);
+
+}
